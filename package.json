@@ -8,6 +8,7 @@
       "hyperclick",
       "php"
   ],
+  "repository": "https://github.com/harikt/php-hyperclick",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
