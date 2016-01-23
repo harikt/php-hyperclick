@@ -2,11 +2,11 @@
   "name": "php-hyperclick",
   "author": "Hari KT",
   "main": "./lib/main",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Hyperclick provider for PHP. Open file when classname is clicked",
   "keywords": [
-      "hyperclick",
-      "php"
+    "hyperclick",
+    "php"
   ],
   "repository": "https://github.com/harikt/php-hyperclick",
   "license": "MIT",
@@ -20,9 +20,7 @@
       }
     }
   },
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "devDependencies": {
     "hyperclick-interfaces": "0.0.0"
   }
