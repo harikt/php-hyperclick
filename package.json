@@ -1,0 +1,26 @@
+{
+  "name": "php-hyperclick",
+  "author": "Hari KT",
+  "main": "./lib/main",
+  "version": "0.0.0",
+  "description": "Hyperclick provider",
+  "keywords": [
+  ],
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "providedServices": {
+    "hyperclick.provider": {
+      "versions": {
+        "0.0.0": "getProvider"
+      }
+    }
+  },
+  "dependencies": {
+      
+  },
+  "devDependencies": {
+    "hyperclick-interfaces": "0.0.0"
+  }
+}
