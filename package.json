@@ -21,7 +21,7 @@
     }
   },
   "dependencies": {
-    "hyperclick": "~0.30"
+    "hyperclick": "0.35.0"
   },
   "devDependencies": {
     "hyperclick-interfaces": "0.0.0"
