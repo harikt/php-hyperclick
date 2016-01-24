@@ -2,7 +2,7 @@
   "name": "php-hyperclick",
   "author": "Hari KT",
   "main": "./lib/main",
-  "version": "0.2.1-4",
+  "version": "0.2.1-5",
   "description": "Hyperclick provider for PHP. Open file when classname is clicked",
   "keywords": [
     "hyperclick",
@@ -21,7 +21,7 @@
     }
   },
   "dependencies": {
-      "hyperclick": "^0.0.20"
+    "hyperclick": "^0.0.20"
   },
   "devDependencies": {
     "hyperclick-interfaces": "0.0.0"
