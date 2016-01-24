@@ -21,10 +21,9 @@ This works with the help of some dependencies
 
 ## Known Limitations
 
-* Must need use statement, so things like `\Lib\Hello` will not be located.
-* Working state on windows not known
-* Most probably in MAC it will work
-* There may be other unknown bugs
+* Must have `use` statement in classes. Else clicking on things like `new \Lib\Hello\World()` will not be opened.
+* May not work on windows
+* Other unknown bugs
 
 ## Thanks
 
