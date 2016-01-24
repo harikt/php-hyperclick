@@ -16,7 +16,10 @@ if (file_exists($autoloader)) {
     } else {
         // Get current namespace
         $namespace = $fqns->getNamespace();
-        echo $loader->findFile($namespace . '\\' . $class);
+        if ($namespace) {
+            $class = $namespace . '\\' . $class;
+        }
+        echo $loader->findFile($class);
     }
 
 }
