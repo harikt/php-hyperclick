@@ -1,3 +1,6 @@
+# 0.3.0
+* Moving to coffee script
+
 # 0.2.1
 
 * Bug fix adding necessary dependencies on the package.json. So hyperclick is installed automatically.
