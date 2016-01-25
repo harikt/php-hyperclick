@@ -35,5 +35,6 @@ Special Thanks to
 * Mark Hahn
 * Lee Dohm
 * Dylan R. E. Moonfire
+* Joel Clermont
 
 and to everyone who have helped knowingly/unknowingly to make this happen.
