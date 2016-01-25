@@ -32,5 +32,8 @@ Special Thanks to
 * Marco Pivetta
 * Shameer C
 * Wouter J
+* Mark Hahn
+* Lee Dohm
+* Dylan R. E. Moonfire
 
 and to everyone who have helped knowingly/unknowingly to make this happen.
