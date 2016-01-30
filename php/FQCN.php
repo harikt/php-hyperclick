@@ -15,7 +15,7 @@ class FQCN
         foreach ($tokens as $token) {
             if (is_array($token)) {
                 if (token_name($token[0]) == 'T_WHITESPACE') {
-                    $useNamespace = 0;
+                    // $useNamespace = 0;
                     continue;
                 }
                 if (token_name($token[0]) == 'T_NAMESPACE') {
@@ -69,7 +69,7 @@ class FQCN
 
     public function getNamespace()
     {
-        return $this->currentNamespace;
+        return trim($this->currentNamespace);
     }
 
     protected function getShortName($className)
