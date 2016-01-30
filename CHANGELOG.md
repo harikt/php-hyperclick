@@ -1,3 +1,7 @@
+# 0.3.1
+* Fix the clicked class namespace when they are on the same root namespace.
+Eg : `Cake\Core\Plugin` class contains a call to `Classloader`. Which is not referenced in the namespace.
+
 # 0.3.0
 * Moving to coffee script
 
