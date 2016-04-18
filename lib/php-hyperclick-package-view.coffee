@@ -1,4 +1,5 @@
 path = require "path"
+fs = require "fs"
 child_process = require "child_process"
 
 module.exports =
@@ -39,12 +40,13 @@ class PhpHyperclickPackageView
               projectPath
             ]
             `openFilePath = child_process.spawnSync('php', args).output[1].toString('ascii')`
-            if openFilePath
-              atom.workspace.open openFilePath
-            else
-              atom.notifications.addInfo 'Unable to locate , errored with ' + openFilePath
-            return
 
+            try
+              if fs.lstatSync(openFilePath).isFile()
+                atom.workspace.open openFilePath
+            catch error
+              atom.notifications.addError 'Error : ' + openFilePath
+            return
         }
 
   # Tear down any state and detach

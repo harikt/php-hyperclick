@@ -3,7 +3,7 @@ $class = $argv[1];
 $file = $argv[2];
 $rootpath = $argv[3];
 $autoloader = $rootpath . '/vendor/autoload.php';
-if (file_exists($autoloader)) {
+if (is_readable($autoloader)) {
     $loader = require $autoloader;
 
     require __DIR__ . '/FQCN.php';
@@ -22,4 +22,6 @@ if (file_exists($autoloader)) {
         echo $loader->findFile($class);
     }
 
+} else {
+    echo "Please make sure the composer vendor/autoload.php file exists in root of project and is readable.";
 }
