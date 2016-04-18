@@ -1,3 +1,6 @@
+# 0.4.0
+* Fixed #2 . Inform the user if vendor/autoload.php doesn't exists in root of project.
+
 # 0.3.1
 * Fix the clicked class namespace when they are on the same root namespace.
 Eg : `Cake\Core\Plugin` class contains a call to `Classloader`. Which is not referenced in the namespace.
