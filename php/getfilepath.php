@@ -5,9 +5,14 @@ $rootpath = $argv[3];
 
 require __DIR__ . '/FQCN.php';
 
+$foundAutoLoader = false;
+
 // First try default location
-if(getFilePath($rootpath . '/vendor/autoload.php', $class, $file)) {
-  exit(0);
+if(is_readable($autoloader)) {
+  $foundAutoLoader = true;
+  if(getFilePath($rootpath . '/vendor/autoload.php', $class, $file)) {
+    exit(0);
+  }
 }
 
 // Try to find autoloader.php elsewhere in $rootpath
@@ -15,12 +20,17 @@ $dirIterator = new RecursiveDirectoryIterator($rootpath);
 $reqIterator = new RecursiveIteratorIterator($dirIterator);
 $regexIterator = new RegexIterator($reqIterator, '#/vendor/autoload.php$#i');
 foreach($regexIterator as $autoloader) {
+  $foundAutoLoader = true;
   if(getFilePath($autoloader, $class, $file)) {
     exit(0);
   }
 }
 
-echo "Class $class not found, please make sure the composer vendor/autoload.php file exists in your project and is readable.";
+if($foundAutoLoader) {
+  echo "Class $class not found.";
+} else {
+  echo "Class $class not found, please make sure the composer vendor/autoload.php file exists in your project and is readable.";
+}
 
 function getFilePath($autoloader, $class, $file) {
   if (!is_readable($autoloader)) {
