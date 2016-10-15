@@ -22,3 +22,8 @@ $expected = array(
 $fqcn = new Hkt\FQCN();
 $contents = file_get_contents(__DIR__ . '/TestClass.php');
 it("expected and returned the same array", $expected == $fqcn->getAllUseStatements($contents));
+
+$contents = file_get_contents(__DIR__ . '/Another/World.php');
+$fqns = new Hkt\FQCN();
+$fqns->getAllUseStatements($contents);
+it("Expected and return the same namespace Another", 'Another' == $fqns->getNamespace());

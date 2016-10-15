@@ -62,6 +62,13 @@ class FQCN
                     }
                     $shortName = $className = '';
                 }
+                /**
+                 * End of namespace
+                 */
+                if ($token == ';' && $useNamespace == 1)
+                {
+                    $useNamespace = 0;
+                }
             }
         }
         return $result;
