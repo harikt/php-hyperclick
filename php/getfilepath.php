@@ -8,6 +8,7 @@ require __DIR__ . '/FQCN.php';
 $foundAutoLoader = false;
 
 // First try default location
+$autoloader = $rootpath . '/vendor/autoload.php';
 if(is_readable($autoloader)) {
   $foundAutoLoader = true;
   if(getFilePath($rootpath . '/vendor/autoload.php', $class, $file)) {
@@ -15,7 +16,7 @@ if(is_readable($autoloader)) {
   }
 }
 
-// Try to find autoloader.php elsewhere in $rootpath
+// Try to find autoload.php elsewhere in $rootpath
 $dirIterator = new RecursiveDirectoryIterator($rootpath);
 $reqIterator = new RecursiveIteratorIterator($dirIterator);
 $regexIterator = new RegexIterator($reqIterator, '#/vendor/autoload.php$#i');
