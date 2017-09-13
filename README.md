@@ -1,5 +1,7 @@
 # php-hyperclick package
 
+This package is no longer maintained for we have [Atom IDE PHP](https://github.com/atom/ide-php) which has more features.
+
 Open the class files when you trigger `ctrl` + `mouse left click`.
 
 ![How it works!](https://cloud.githubusercontent.com/assets/120454/12533819/51b6cd44-c264-11e5-855c-ecd6437ca43d.gif)
